@@ -10,6 +10,7 @@ class GameScreen:
         self.constants = constants
         self.save_data = save_data
         self.current_game_screen = None
+        self.set_game_screen("upgrades")
 
 
     def set_game_screen(self, new_state):
@@ -22,6 +23,7 @@ class GameScreen:
         pass
 
     def draw(self):
-
-        pyxel.text(10, 10, "Game Starts...", 11)
+        pyxel.cls(0)
+        if self.current_game_screen:
+            self.current_game_screen.draw()
 

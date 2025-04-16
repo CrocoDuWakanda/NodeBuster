@@ -1,3 +1,4 @@
+from scripts.utilitaries.constants import COLORS
 import pyxel
 
 
@@ -22,7 +23,17 @@ class UpgradeNode:
             if self.action:
                 self.action(self.name)
 
-    def draw(self):
-        color = "red" if self.level < self.max_level else "yellow"
-        pyxel.rect(self.x, self.y, 16, 16, color)
+    def draw_tooltip(self, offset_x=0, offset_y=0):
+        x = self.x + offset_x
+        y = self.y + offset_y
+        mx, my = pyxel.mouse_x, pyxel.mouse_y
+        if self.is_hovered(mx - offset_x, my - offset_y):
+            text = f"{self.name} ({self.level}/{self.max_level})"
+            width = len(text) * 4 + 4
+            pyxel.rect(mx, my - 10, width, 10, 1)
+            pyxel.text(mx + 2, my - 8, text, 7)
+
+    def draw(self, offset_x=0, offset_y=0):
+        color = COLORS["red"] if self.level < self.max_level else COLORS["yellow"]
+        pyxel.rect(self.x+offset_x, self.y+offset_y, 16, 16, color)
         pyxel.text(self.x + 2, self.y + 6, str(self.level), 0)

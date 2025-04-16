@@ -53,6 +53,7 @@ class App:
 
     def draw(self):
         pyxel.cls(0)
+
         if self.current_screen:
             self.current_screen.draw()
 
