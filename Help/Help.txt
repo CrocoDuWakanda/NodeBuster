@@ -1,0 +1,4 @@
+D:\MobileIDE\WPy64-31241\python-3.12.4.amd64\python.exe -m pyxel edit
+
+
+pyxel.blt(dest_x, dest_y, img_bank, src_x, src_y, width, height, colkey)

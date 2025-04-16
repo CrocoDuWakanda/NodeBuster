@@ -1,0 +1,18 @@
+{
+    "profile" : {
+        "prestige" : 0,
+        "virus_deployed" : 0
+    },
+    "wallet" : {
+        "bits" : 0,
+        "nodes" : 0,
+        "cores" : 0,
+        "sp" : 0,
+        "netcoins" : 0,
+        "processors" : 0
+    },
+    "player_stats" : {
+        "damage" : 1,
+        "max_health" : 10
+    }
+}

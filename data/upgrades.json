@@ -1,0 +1,14 @@
+{
+    "upgrades" : {
+        "damage" : {
+            "level" : 0,
+            "max_level" : 8,
+            "increase" : 1.05
+        },
+        "max_health" : {
+            "level" : 0,
+            "max_level" : 8,
+            "increase" : 1.05
+        }
+    }
+}
